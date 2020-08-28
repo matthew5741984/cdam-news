@@ -2,7 +2,9 @@
 
 namespace App\Providers;
 
+use App\Post;
 use Illuminate\Support\ServiceProvider;
+use View;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -23,6 +25,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        View::composer('partials.footer', function ($view) {
+            $view->with('posts', Post::orderBy('created_at', 'DESC')->take(2)->get());
+        });
     }
 }
