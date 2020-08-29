@@ -15,6 +15,12 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'BlogController@index');
 
+Route::get('post/{slug}', 'BlogController@show');
+
+Route::get('realtime-wl', function () {
+    return view('realtime-wl.index');
+});
+
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });

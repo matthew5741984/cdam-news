@@ -18,16 +18,17 @@
                     <h2 class="ftco-heading-2">latest News</h2>
                     @forelse($posts as $post)
                         <div class="block-21 mb-4 d-flex">
-                            <a class="img mr-4 rounded" style="background-image: url('storage/{{ $post->image }}');"></a>
+                            <a class="img mr-4 rounded"
+                                style="background-image: url('{{ asset('storage/' . $post->image) }}');"></a>
                             <div class="text">
                                 <h3 class="heading"><a href="#">{{ $post->title }}</a></h3>
                                 <div class="meta">
                                     <div><a href="#"></span> {{ $post->created_at->format('M. d, Y') }}</a></div>
                                     <div><a href="#"></span>
                                             @if ($post->author != null)
-                                                {{ $post->author->name }}
+                                                {{ \Illuminate\Support\Str::limit($post->author->name, 7) }}
                                             @else
-                                                unknown
+                                                {{ \Illuminate\Support\Str::limit('Undefined', 7) }}
                                             @endif
                                         </a></div>
                                     <div><a href="#"></span> 19</a></div>

@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Navigation;
 use App\Post;
 use Illuminate\Support\ServiceProvider;
 use View;
@@ -27,6 +28,10 @@ class AppServiceProvider extends ServiceProvider
     {
         View::composer('partials.footer', function ($view) {
             $view->with('posts', Post::orderBy('created_at', 'DESC')->take(2)->get());
+        });
+
+        View::composer('partials.jumbotron-2', function ($view) {
+            $view->with('navigations', Navigation::all());
         });
     }
 }

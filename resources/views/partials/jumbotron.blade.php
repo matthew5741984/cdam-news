@@ -1,4 +1,4 @@
-<div class="hero-wrap js-fullheight" style="background-image: url('images/bg_1.jpg');"
+<div class="hero-wrap js-fullheight" style="background-image: url('{{ asset('images/bg_1.jpg') }}');"
     data-stellar-background-ratio="0.5">
     <div class="overlay"></div>
     <div class="container">
@@ -6,7 +6,7 @@
             data-scrollax-parent="true">
             <div class="col-md-12 ftco-animate">
                 <h2 class="subheading">China's Three Gorges Dam</h2>
-                <h1 class="mb-4 mb-md-0">Latest News</h1>
+                <h1 class="mb-4 mb-md-0">Daily News</h1>
                 <div class="row">
                     <div class="col-md-7">
                         <div class="text">

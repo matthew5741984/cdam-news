@@ -7,12 +7,7 @@
         </button>
 
         <div class="collapse navbar-collapse" id="ftco-nav">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item"><a href="{{ url('/') }}" class="nav-link">Home</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Realtime WL</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Team</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
-            </ul>
+            {{ menu('main', 'menus.main') }}
         </div>
     </div>
 </nav>

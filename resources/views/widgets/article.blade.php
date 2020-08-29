@@ -4,8 +4,8 @@
             @forelse($posts as $post)
                 <div class="col-md-4 d-flex ftco-animate">
                     <div class="blog-entry justify-content-end">
-                        <a href="blog-single.html" class="block-20"
-                            style="background-image: url('storage/{{ $post->image }}');">
+                        <a href="{{ url('post/' . $post->slug) }}" class="block-20"
+                            style="background-image: url('{{ asset('storage/' . $post->image) }}');">
                         </a>
                         <div class="text p-4 float-right d-block">
                             <div class="topper d-flex align-items-center">

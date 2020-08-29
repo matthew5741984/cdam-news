@@ -12,4 +12,11 @@ class BlogController extends Controller
 
         return view('article.index', compact('posts'));
     }
+
+    public function show($slug)
+    {
+        $post = Post::findBySlug($slug);
+
+        return view('article.show', compact('post'));
+    }
 }
