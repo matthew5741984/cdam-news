@@ -22,5 +22,12 @@
         "sass-loader": "^8.0.0",
         "vue": "^2.5.17",
         "vue-template-compiler": "^2.6.10"
+    },
+    "dependencies": {
+        "@amcharts/amcharts4": "^4.9.37",
+        "@fortawesome/fontawesome-free": "^5.14.0",
+        "material-design-iconic-font": "^2.2.0",
+        "vue-good-table": "^2.21.0",
+        "vue-loading-overlay": "^3.3.4"
     }
 }

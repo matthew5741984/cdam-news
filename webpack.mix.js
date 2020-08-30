@@ -11,6 +11,15 @@ const mix = require('laravel-mix');
  |
  */
 
+mix.webpackConfig({
+    externals: function (context, request, callback) {
+        if (/xlsx|canvg|pdfmake/.test(request)) {
+            return callback(null, "commonjs " + request);
+        }
+        callback();
+    }
+})
+
 mix.js('resources/js/app.js', 'public/js')
     .sass('resources/sass/app.scss', 'public/css');
 
@@ -25,7 +34,8 @@ mix.styles([
     'public/css/owl.carousel.min.css',
     'public/css/owl.theme.default.min.css',
     'public/css/style.css',
-    'public/css/custom.css'
+    'public/css/custom.css',
+    'public/css/realtime-dashboard.css'
 ], 'public/css/all.css');
 
 mix.scripts([

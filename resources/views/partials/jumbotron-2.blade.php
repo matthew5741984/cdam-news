@@ -1,7 +1,7 @@
 @foreach ($navigations as $navigation)
     @if (str_contains(URL::current(), $navigation->path))
         <section class="hero-wrap-custom hero-wrap-2 js-fullheight"
-            style="background-image: url('{{ asset('storage/' . $navigation->image) }}');">
+            style="background-image: url('{{ asset('storage/' . $navigation->image) }}');"
             data-stellar-background-ratio="0.5">
             <div class="overlay"></div>
             <div class="container">

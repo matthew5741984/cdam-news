@@ -13,12 +13,14 @@ use Illuminate\Support\Facades\Route;
 |
  */
 
-Route::get('/', 'BlogController@index');
+Route::get('/', 'BlogController@index')->name('home');
 
 Route::get('post/{slug}', 'BlogController@show');
 
-Route::get('realtime-wl', function () {
-    return view('realtime-wl.index');
+Route::get('post/category/{category}', 'BlogController@category');
+
+Route::get('realtime-dashboard', function () {
+    return view('realtime-dashboard.index');
 });
 
 Route::group(['prefix' => 'admin'], function () {

@@ -14,10 +14,10 @@
                     {!! $post->body !!}
                     <div class="tag-widget post-tag-container mb-5 mt-5">
                         <div class="tagcloud">
-                            <a href="#" class="tag-cloud-link">Life</a>
-                            <a href="#" class="tag-cloud-link">Sport</a>
-                            <a href="#" class="tag-cloud-link">Tech</a>
-                            <a href="#" class="tag-cloud-link">Travel</a>
+                            @if ($post->category != null)
+                                <a href="{{ url('/post/category/' . $post->category->id) }}"
+                                    class="tag-cloud-link">{{ $post->category->name }}</a>
+                            @endif
                         </div>
                     </div>
 
@@ -50,11 +50,12 @@
                     <div class="sidebar-box ftco-animate">
                         <div class="categories">
                             <h3>Categories</h3>
-                            <li><a href="#">Illustration <span class="ion-ios-arrow-forward"></span></a></li>
-                            <li><a href="#">Branding <span class="ion-ios-arrow-forward"></span></a></li>
-                            <li><a href="#">Application <span class="ion-ios-arrow-forward"></span></a></li>
-                            <li><a href="#">Design <span class="ion-ios-arrow-forward"></span></a></li>
-                            <li><a href="#">Marketing <span class="ion-ios-arrow-forward"></span></a></li>
+                            @forelse($categories as $category)
+                                <li><a href="{{ url('/post/category/' . $category->id) }}">{{ $category->name }} <span
+                                            class="ion-ios-arrow-forward"></span></a></li>
+                            @empty
+                                <li><a href="#">Not Found <span class="ion-ios-arrow-forward"></span></a></li>
+                            @endforelse
                         </div>
                     </div>
 

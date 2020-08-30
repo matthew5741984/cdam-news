@@ -25,7 +25,7 @@
                     </div>
                 </div>
             @empty
-                <h3 class="text-center">Nothing</h3>
+                <h3 class="text-center">Can't see shit captain!</h3>
             @endforelse
         </div>
         <div class="row mt-5">

@@ -49,7 +49,7 @@
                         <li><a href="#" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>About</a>
                         </li>
                         <li><a href="#" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>Realtime
-                                WL</a></li>
+                                Dashboard</a></li>
                         <li><a href="#" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>Contact</a>
                         </li>
                     </ul>
