@@ -17,9 +17,11 @@ class BlogController extends Controller
     public function show($slug)
     {
         $post = Post::findBySlug($slug);
+        $this_category = $post->category_id;
+        $recent_posts = Post::where('category_id', $this_category)->where('id', '!=' , $post->id)->orderBy('created_at', 'DESC');
         $categories = Category::select('id', 'name')->get();
 
-        return view('article.show', compact('post', 'categories'));
+        return view('article.show', compact('post', 'categories', 'recent_posts'));
     }
 
     public function category($category)

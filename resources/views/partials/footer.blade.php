@@ -21,17 +21,16 @@
                             <a class="img mr-4 rounded"
                                 style="background-image: url('{{ asset('storage/' . $post->image) }}');"></a>
                             <div class="text">
-                                <h3 class="heading"><a href="#">{{ $post->title }}</a></h3>
+                                <h3 class="heading"><a href="{{ url('post/' . $post->slug) }}">{{ $post->title }}</a></h3>
                                 <div class="meta">
                                     <div><a href="#"></span> {{ $post->created_at->format('M. d, Y') }}</a></div>
                                     <div><a href="#"></span>
                                             @if ($post->author != null)
-                                                {{ \Illuminate\Support\Str::limit($post->author->name, 7) }}
+                                                {{ $post->author->name }}
                                             @else
-                                                {{ \Illuminate\Support\Str::limit('Undefined', 7) }}
+                                                Undefined
                                             @endif
                                         </a></div>
-                                    <div><a href="#"></span> 19</a></div>
                                 </div>
                             </div>
                         </div>
@@ -43,15 +42,7 @@
                 <div class="ftco-footer-widget mb-4 ml-md-5">
                     <h2 class="ftco-heading-2">Information</h2>
                     <ul class="list-unstyled">
-                        <li><a href="{{ url('/') }}" class="py-1 d-block"><span
-                                    class="ion-ios-arrow-forward mr-3"></span>Home</a>
-                        </li>
-                        <li><a href="#" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>About</a>
-                        </li>
-                        <li><a href="#" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>Realtime
-                                Dashboard</a></li>
-                        <li><a href="#" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>Contact</a>
-                        </li>
+                        {{ menu('main', 'menus.footer') }}
                     </ul>
                 </div>
             </div>
