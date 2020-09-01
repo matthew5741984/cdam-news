@@ -8,6 +8,7 @@ window.Vue = require('vue');
 
 Vue.use(VueGoodTablePlugin);
 
+Vue.component('nav-view', require('./Partials/nav-view.vue').default);
 Vue.component('jumbotron-view', require('./Partials/jumbotron-view.vue').default);
 Vue.component('realtime-dashboard', require('./RealtimeDashboard/Main.vue').default);
 Vue.component('search-engine', require('./SearchEngine/Main.vue').default);
