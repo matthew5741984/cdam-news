@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use App\Navigation;
 use App\Post;
+use Illuminate\Support\Facades\URL;
 use Illuminate\Support\ServiceProvider;
 use View;
 
@@ -31,7 +32,9 @@ class AppServiceProvider extends ServiceProvider
         });
 
         View::composer('partials.jumbotron-2', function ($view) {
+            $current_path = "/" . explode('/', URL::current())[3];
             $view->with('navigations', Navigation::all());
+            $view->with('current_path', $current_path);
         });
     }
 }

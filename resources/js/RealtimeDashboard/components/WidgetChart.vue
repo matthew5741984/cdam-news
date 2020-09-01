@@ -83,10 +83,10 @@
 export default {
   data() {
     return {
-      getCurrentLevel: null,
+      getCurrentLevel: "",
       maximumLevel: 175,
-      getCurrentInFlow: null,
-      getCurrentOutFlow: null,
+      getCurrentInFlow: "",
+      getCurrentOutFlow: "",
       isLoading: false,
       widgetChart1: "/images/widgetChart1.png",
       widgetChart2: "/images/widgetChart2.png",
@@ -96,7 +96,7 @@ export default {
   },
   computed: {
     getRemainLevel: function () {
-      if (this.getCurrentLevel != null) {
+      if (this.getCurrentLevel != "") {
         let remainLevel = this.maximumLevel - this.getCurrentLevel;
         remainLevel = remainLevel.toFixed(2);
         return remainLevel;

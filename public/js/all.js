@@ -10803,7 +10803,7 @@ w.appendChild(document.createTextNode(".scrollax-performance, .scrollax-performa
 			if($('#ftco-loader').length > 0) {
 				$('#ftco-loader').removeClass('show');
 			}
-		}, 1);
+		}, 500);
 	};
 	loader();
 

@@ -52,7 +52,7 @@ export default {
           field: "WaterFlow",
         },
       ],
-      rows: [],
+      rows: "",
     };
   },
   components: {
