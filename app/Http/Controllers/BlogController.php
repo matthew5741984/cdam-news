@@ -19,7 +19,7 @@ class BlogController extends Controller
     {
         $post = Post::findBySlug($slug);
         $this_category = $post->category_id;
-        $recent_posts = Post::where('category_id', $this_category)->where('id', '!=', $post->id)->orderBy('created_at', 'DESC')->paginate(3);
+        $recent_posts = Post::where('category_id', $this_category)->where('id', '!=', $post->id)->orderBy('created_at', 'DESC')->take(3)->get();
         $categories = Category::select('id', 'name')->get();
 
         return view('article.show', compact('post', 'categories', 'recent_posts'));

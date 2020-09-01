@@ -1,4 +1,4 @@
-<jumbotron-view inline-template>
+<jumbotron-2-view inline-template>
     @foreach ($navigations as $navigation)
         @if (str_contains($current_path, $navigation->path))
             <section class="hero-wrap-custom hero-wrap-2 js-fullheight"
@@ -18,4 +18,4 @@
             </section>
         @endif
     @endforeach
-</jumbotron-view>
+</jumbotron-2-view>
