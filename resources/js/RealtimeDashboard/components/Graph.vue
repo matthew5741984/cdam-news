@@ -58,16 +58,16 @@ export default {
     setTimeout(() => {
       let chart = am4core.create("chartdiv", am4charts.XYChart);
       chart.paddingRight = 20;
-      let lastTwentyElement = [];
+      let lastHundredElement = [];
       let data = [];
       let previousValue;
       // get the last 100 elements of an array
-      this.lastTwentyElement = this.dynamodbData.slice(
+      this.lastHundredElement = this.dynamodbData.slice(
         Math.max(this.dynamodbData.length - 100, 1)
       );
-      for (var i = 0; i < this.lastTwentyElement.length; i++) {
-        let waterlevel = this.lastTwentyElement[i]["WaterLevel"];
-        let datetime = this.lastTwentyElement[i]["DateTime"];
+      for (var i = 0; i < this.lastHundredElement.length; i++) {
+        let waterlevel = this.lastHundredElement[i]["WaterLevel"];
+        let datetime = this.lastHundredElement[i]["DateTime"];
         if (i > 0) {
           // add color to previous data item depending on whether current value is less or more than previous value
           if (previousValue <= waterlevel) {
