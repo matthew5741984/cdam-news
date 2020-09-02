@@ -18135,6 +18135,18 @@ textarea.form-control {
     opacity: 0.05;
 }
 
+@media (min-width: 676px) and (max-width: 991px) {
+    .overview-item--c1 img {
+        display: none;
+    }
+}
+
+@media (max-width: 576px) {
+    .overview-item--c1 img {
+        display: none;
+    }
+}
+
 .overview-item--c2 {
     background-image: -moz-linear-gradient(90deg, #11998e 0%, #38ef7d 100%);
     background-image: -webkit-linear-gradient(90deg, #11998e 0%, #38ef7d 100%);
@@ -18150,6 +18162,18 @@ textarea.form-control {
     width: 100%;
     height: auto;
     opacity: 0.05;
+}
+
+@media (min-width: 676px) and (max-width: 991px) {
+    .overview-item--c2 img {
+        display: none;
+    }
+}
+
+@media (max-width: 576px) {
+    .overview-item--c2 img {
+        display: none;
+    }
 }
 
 .overview-item--c3 {
@@ -18169,6 +18193,18 @@ textarea.form-control {
     opacity: 0.05;
 }
 
+@media (min-width: 676px) and (max-width: 991px) {
+    .overview-item--c3 img {
+        display: none;
+    }
+}
+
+@media (max-width: 576px) {
+    .overview-item--c3 img {
+        display: none;
+    }
+}
+
 .overview-item--c4 {
     background-image: -moz-linear-gradient(90deg, #0000FF 0%, #00FFFF 100%);
     background-image: -webkit-linear-gradient(90deg, #0000FF 0%, #00FFFF 100%);
@@ -18184,6 +18220,18 @@ textarea.form-control {
     width: 100%;
     height: auto;
     opacity: 0.05;
+}
+
+@media (min-width: 676px) and (max-width: 991px) {
+    .overview-item--c4 img {
+        display: none;
+    }
+}
+
+@media (max-width: 576px) {
+    .overview-item--c4 img {
+        display: none;
+    }
 }
 
 .overview-box .icon {
@@ -18245,6 +18293,10 @@ textarea.form-control {
         font-size: 20px;
         margin-bottom: 0;
     }
+    .overview-box .text h4 {
+        font-size: 20px;
+        margin-bottom: 0;
+    }
     .overview-box .text span {
         font-size: 14px;
     }
@@ -18267,6 +18319,18 @@ textarea.form-control {
 .overview-chart-special {
     height: 100px;
     position: relative;
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .overview-chart-special {
+        height: 96px;
+    }
+}
+
+@media (max-width: 991px) {
+    .overview-chart-special {
+        height: 111px;
+    }
 }
 
 .overview-chart canvas {
@@ -19120,10 +19184,39 @@ textarea.form-control {
     color: grey;
 }
 
+@media (max-width: 1199px) {
+    #chart-title h4 {
+        font-size: 95%;
+    }
+
+    #chart-title p {
+        font-size: 95%;
+    }
+}
+
 #chartdiv {
     width: 1000px;
     height: 600px;
     margin: 0 auto;
+}
+
+@media (max-width: 1199px) {
+    #chartdiv {
+        width: 85vw;
+    }
+}
+
+@media (max-width: 991px) {
+    #chartdiv {
+        height: 60vw;
+    }
+}
+
+@media (max-width: 869px) {
+    #chartdiv {
+        width: 75vw;
+        height: 55vw;
+    }
 }
 
 #loading {

@@ -5,7 +5,7 @@
         <div class="row">
           <div class="col-md-12">
             <div class="overview-wrap">
-              <h2 class="title-1"></h2>
+              <h3 class="title-1">Overview</h3>
             </div>
           </div>
         </div>
@@ -21,13 +21,13 @@
         </div>
         <div class="row">
           <div class="col-lg-9">
-            <h2 class="title-1 m-b-25">Daily Record</h2>
+            <h3 class="title-1 m-b-25">Daily Record</h3>
             <div class="table-responsive table--no-card m-b-40">
               <data-table></data-table>
             </div>
           </div>
           <div class="col-lg-3">
-            <h2 class="title-1 m-b-25">Other Stations</h2>
+            <h3 class="title-1 m-b-25">Other Stations</h3>
             <div class="au-card au-card--bg-blue au-card-top-countries m-b-40">
               <div class="au-card-inner">
                 <div class="table-responsive">

@@ -73,9 +73,9 @@ export default {
       }, 2000);
     },
     onPageChange: function () {
-      var elmnt = document.getElementById("table-container");
+      var dom = document.getElementsByClassName("title-1 m-b-25");
       setTimeout(() => {
-        elmnt.scrollIntoView();
+        dom[0].scrollIntoView();
       }, 10);
     },
   },
