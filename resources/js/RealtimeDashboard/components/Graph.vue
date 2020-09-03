@@ -33,7 +33,7 @@ export default {
       isfullPage: false,
       isShow: false,
       apiPath:
-        "https://b1d4ej8fcf.execute-api.eu-west-2.amazonaws.com/prod/get_unreverse_data",
+        "https://1761wbb669.execute-api.eu-west-2.amazonaws.com/dev/get_unreverse_data",
     };
   },
   components: {

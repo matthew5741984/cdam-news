@@ -31,7 +31,7 @@ export default {
       isfullPage: false,
       paginationOptions: { enabled: true },
       apiPath:
-        "https://b1d4ej8fcf.execute-api.eu-west-2.amazonaws.com/prod/get_reverse_data",
+        "https://1761wbb669.execute-api.eu-west-2.amazonaws.com/dev/get_reverse_data",
       tableTitle: "Three Gorges Dam",
       columns: [
         {
