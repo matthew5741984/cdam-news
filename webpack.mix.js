@@ -37,6 +37,13 @@ mix.styles([
     'public/css/custom.css'
 ], 'public/css/all.css');
 
+mix.styles([
+    'public/css/contact/hamburgers.min.css',
+    'public/css/contact/select2.min.css',
+    'public/css/contact/main.css',
+    'public/css/contact/util.css',
+], 'public/css/contact/contact.css');
+
 mix.scripts([
     'public/js/jquery.min.js',
     'public/js/jquery-migrate-3.0.1.min.js',
