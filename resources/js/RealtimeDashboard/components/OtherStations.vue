@@ -1,7 +1,7 @@
 <template>
   <table class="table table-top-countries">
     <loading loader="bars" :active.sync="isLoading" :is-full-page="isfullPage"></loading>
-    <div id="blank-page" v-if="blankPage"></div>
+    <div class="blank-page" v-if="blankPage"></div>
     <tbody v-else>
       <tr>
         <td>Station</td>

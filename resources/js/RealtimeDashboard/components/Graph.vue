@@ -1,13 +1,13 @@
 <template>
-  <div id="chart-container">
-    <div id="chart-title">
+  <div class="chart-container">
+    <div class="chart-title">
       <h4>{{ graphHeading }}</h4>
       <p>{{ graphSubheading }}</p>
       <p v-if="isShow">{{ dataAs + " " + lastUpdate + " " + timeZone}}</p>
     </div>
-    <div id="chart-inner">
+    <div class="chart-inner">
       <loading loader="bars" :active.sync="isLoading" :is-full-page="isfullPage"></loading>
-      <div id="chartdiv"></div>
+      <div class="chartdiv"></div>
     </div>
   </div>
 </template>

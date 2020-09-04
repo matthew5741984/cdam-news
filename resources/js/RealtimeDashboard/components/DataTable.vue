@@ -1,9 +1,9 @@
 <template>
-  <div id="table-container">
+  <div class="table-container">
     <loading loader="bars" :active.sync="isLoading" :is-full-page="isfullPage"></loading>
-    <div id="blank-page" v-if="blankPage"></div>
-    <div id="table-inner" v-else>
-      <div id="station-title">
+    <div class="blank-page" v-if="blankPage"></div>
+    <div class="table-inner" v-else>
+      <div class="station-title">
         <button>{{ tableTitle }}</button>
       </div>
       <vue-good-table

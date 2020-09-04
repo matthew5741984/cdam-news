@@ -511,48 +511,48 @@
 
 /* ----- amCharts ----- */
 
-#chart-title {
+.chart-title {
     text-align: center;
 }
 
-#chart-title h4 {
+.chart-title h4 {
     line-height: 40px;
 }
 
-#chart-title p {
+.chart-title p {
     line-height: 10px;
     color: grey;
 }
 
 @media (max-width: 1199px) {
-    #chart-title h4 {
+    .chart-title h4 {
         font-size: 95%;
     }
-    #chart-title p {
+    .chart-title p {
         font-size: 95%;
     }
 }
 
-#chartdiv {
+.chartdiv {
     width: 1000px;
     height: 600px;
     margin: 0 auto;
 }
 
 @media (max-width: 1199px) {
-    #chartdiv {
+    .chartdiv {
         width: 85vw;
     }
 }
 
 @media (max-width: 991px) {
-    #chartdiv {
+    .chartdiv {
         height: 60vw;
     }
 }
 
 @media (max-width: 869px) {
-    #chartdiv {
+    .chartdiv {
         width: 75vw;
         height: 55vw;
     }
@@ -565,27 +565,27 @@
 
 /* ----- vue-good-table ----- */
 
-#table-container {
+.table-container {
     position: relative;
 }
 
-#blank-page {
+.blank-page {
     height: 480px;
 }
 
-#station-title {
+.table-inner {
+    padding: 20px;
+    margin: 0 auto;
+}
+
+.station-title {
     padding: 0px 0px 0px;
 }
 
-#station-title button {
+.station-title button {
     background: gray;
     color: white;
     border: none;
     border-radius: 2px 2px 0px 0px;
     font-size: 16px;
-}
-
-#table-inner {
-    padding: 20px;
-    margin: 0 auto;
 }
