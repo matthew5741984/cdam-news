@@ -34,8 +34,7 @@ mix.styles([
     'public/css/owl.carousel.min.css',
     'public/css/owl.theme.default.min.css',
     'public/css/style.css',
-    'public/css/custom.css',
-    'public/css/realtime-dashboard.css'
+    'public/css/custom.css'
 ], 'public/css/all.css');
 
 mix.scripts([

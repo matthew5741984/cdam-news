@@ -88,10 +88,10 @@ export default {
       getCurrentInFlow: "",
       getCurrentOutFlow: "",
       isLoading: false,
-      widgetChart1: "/images/widgetChart1.png",
-      widgetChart2: "/images/widgetChart2.png",
-      widgetChart3: "/images/widgetChart3.png",
-      widgetChart4: "/images/widgetChart4.png",
+      widgetChart1: "/images/widgetChart/widgetChart1.png",
+      widgetChart2: "/images/widgetChart/widgetChart2.png",
+      widgetChart3: "/images/widgetChart/widgetChart3.png",
+      widgetChart4: "/images/widgetChart/widgetChart4.png",
     };
   },
   computed: {

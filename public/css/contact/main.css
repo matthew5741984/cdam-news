@@ -1,39 +1,17 @@
 /*//////////////////////////////////////////////////////////////////
-[ FONT ]*/
-
-@font-face {
-    font-family: Raleway-Black;
-    src: url('/fonts/vendor/raleway/Raleway-Black.ttf');
-}
-
-@font-face {
-    font-family: Raleway-SemiBold;
-    src: url('/fonts/vendor/raleway/Raleway-SemiBold.ttf');
-}
-
-@font-face {
-    font-family: Raleway-Bold;
-    src: url('/fonts/vendor/raleway/Raleway-Bold.ttf');
-}
-
-/*//////////////////////////////////////////////////////////////////
 [ RESTYLE TAG ]*/
 
-* {
+#contact-page {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-}
-
-body, html {
     height: 100%;
-    font-family: Raleway-SemiBold, sans-serif;
+    font-family: "Poppins", Arial, sans-serif;
 }
 
 /*---------------------------------------------*/
 
-a {
-    font-family: Raleway-SemiBold;
+#contact-page a {
     font-size: 14px;
     line-height: 1.7;
     color: #666666;
@@ -44,126 +22,125 @@ a {
     -moz-transition: all 0.4s;
 }
 
-a:focus {
+#contact-page a:focus {
     outline: none !important;
 }
 
-a:hover {
+#contact-page a:hover {
     text-decoration: none;
 }
 
 /*---------------------------------------------*/
 
-h1, h2, h3, h4, h5, h6 {
+#contact-page h1, h2, h3, h4, h5, h6 {
     margin: 0px;
 }
 
-p {
-    font-family: Raleway-SemiBold;
+#contact-page p {
     font-size: 14px;
     line-height: 1.7;
     color: #666666;
     margin: 0px;
 }
 
-ul, li {
+#contact-page ul, li {
     margin: 0px;
     list-style-type: none;
 }
 
 /*---------------------------------------------*/
 
-input {
+#contact-page input {
     outline: none;
     border: none;
 }
 
-textarea {
+#contact-page textarea {
     outline: none;
     border: none;
 }
 
-textarea:focus, input:focus {
+#contact-page textarea:focus, input:focus {
     border-color: transparent !important;
 }
 
-input:focus::-webkit-input-placeholder {
+#contact-page input:focus::-webkit-input-placeholder {
     color: transparent;
 }
 
-input:focus:-moz-placeholder {
+#contact-page input:focus:-moz-placeholder {
     color: transparent;
 }
 
-input:focus::-moz-placeholder {
+#contact-page input:focus::-moz-placeholder {
     color: transparent;
 }
 
-input:focus:-ms-input-placeholder {
+#contact-page input:focus:-ms-input-placeholder {
     color: transparent;
 }
 
-textarea:focus::-webkit-input-placeholder {
+#contact-page textarea:focus::-webkit-input-placeholder {
     color: transparent;
 }
 
-textarea:focus:-moz-placeholder {
+#contact-page textarea:focus:-moz-placeholder {
     color: transparent;
 }
 
-textarea:focus::-moz-placeholder {
+#contact-page textarea:focus::-moz-placeholder {
     color: transparent;
 }
 
-textarea:focus:-ms-input-placeholder {
+#contact-page textarea:focus:-ms-input-placeholder {
     color: transparent;
 }
 
-input::-webkit-input-placeholder {
+#contact-page input::-webkit-input-placeholder {
     color: #adadad;
 }
 
-input:-moz-placeholder {
+#contact-page input:-moz-placeholder {
     color: #adadad;
 }
 
-input::-moz-placeholder {
+#contact-page input::-moz-placeholder {
     color: #adadad;
 }
 
-input:-ms-input-placeholder {
+#contact-page input:-ms-input-placeholder {
     color: #adadad;
 }
 
-textarea::-webkit-input-placeholder {
+#contact-page textarea::-webkit-input-placeholder {
     color: #adadad;
 }
 
-textarea:-moz-placeholder {
+#contact-page textarea:-moz-placeholder {
     color: #adadad;
 }
 
-textarea::-moz-placeholder {
+#contact-page textarea::-moz-placeholder {
     color: #adadad;
 }
 
-textarea:-ms-input-placeholder {
+#contact-page textarea:-ms-input-placeholder {
     color: #adadad;
 }
 
 /*---------------------------------------------*/
 
-button {
+#contact-page button {
     outline: none !important;
     border: none;
     background: transparent;
 }
 
-button:hover {
+#contact-page button:hover {
     cursor: pointer;
 }
 
-iframe {
+#contact-page iframe {
     border: none !important;
 }
 
@@ -219,8 +196,8 @@ iframe {
 .contact100-form-title {
     display: block;
     width: 100%;
-    font-family: Raleway-Black;
     font-size: 30px;
+    font-weight: 700;
     color: #333333;
     line-height: 1.2;
     text-transform: uppercase;
@@ -243,7 +220,6 @@ iframe {
 }
 
 .label-input100 {
-    font-family: Raleway-SemiBold;
     font-size: 14px;
     color: #555555;
     line-height: 1.5;
@@ -254,7 +230,6 @@ iframe {
     width: 100%;
     background: #f2f2f2;
     border-radius: 2px;
-    font-family: Raleway-SemiBold;
     font-size: 20px;
     color: #686868;
     line-height: 1.2;
@@ -334,8 +309,8 @@ textarea.input100 {
     padding: 0 20px;
     min-width: 150px;
     height: 62px;
-    font-family: Raleway-Bold;
     font-size: 16px;
+    font-weight: 700;
     color: #fff;
     line-height: 1.2;
     text-transform: uppercase;
@@ -389,7 +364,6 @@ textarea.input100 {
     transform: translateY(50%);
     right: 10px;
     pointer-events: none;
-    font-family: Raleway-SemiBold;
     color: #c80000;
     font-size: 13px;
     line-height: 1.4;
@@ -404,7 +378,6 @@ textarea.input100 {
 
 .alert-validate::after {
     content: "\f12a";
-    font-family: FontAwesome;
     display: block;
     position: absolute;
     color: #c80000;
@@ -436,9 +409,8 @@ textarea.input100 {
 .contact100-more {
     display: block;
     max-width: 960px;
-    font-family: Raleway-SemiBold;
     font-size: 20px;
-    color: #fff;
+    color: #000;
     line-height: 1.4;
     text-align: center;
     padding: 40px 0 10px 0;
