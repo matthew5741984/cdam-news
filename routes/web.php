@@ -25,6 +25,10 @@ Route::get('realtime-dashboard', function () {
     return view('realtime-dashboard.index');
 });
 
+Route::get('contact', function () {
+    return view('contact.index');
+});
+
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });

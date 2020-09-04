@@ -1,5 +1,5 @@
 <jumbotron-2-view inline-template>
-    @foreach ($navigations as $navigation)
+    @forelse ($navigations as $navigation)
         @if (str_contains($current_path, $navigation->path))
             <section class="hero-wrap-custom hero-wrap-2 js-fullheight"
                 style="background-image: url('{{ asset('storage/' . $navigation->image) }}');"
