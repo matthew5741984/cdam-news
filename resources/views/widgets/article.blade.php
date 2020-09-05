@@ -19,13 +19,15 @@
                             </div>
                             <h3 class="heading mb-3"><a href="{{ url('post/' . $post->slug) }}">{{ $post->title }}</a></h3>
                             <p>{{ \Illuminate\Support\Str::limit($post->excerpt, 100) }}</p>
-                            <p><a href="{{ url('post/' . $post->slug) }}" class="btn-custom"><span class="ion-ios-arrow-round-forward mr-3"></span>Read
+                            <p><a href="{{ url('post/' . $post->slug) }}" class="btn-custom"><span
+                                        class="ion-ios-arrow-round-forward mr-3"></span>Read
                                     more</a></p>
                         </div>
                     </div>
                 </div>
             @empty
-                <h3 class="text-center">Can't see shit captain!</h3>
+                <h5 class="text-center">Sorry, we couldn't find any results for <b>{{ $str }}</b>, please try another
+                    term.Please try again using a slightly different search, or go directly to the section you need.</h5>
             @endforelse
         </div>
         <div class="row mt-5">

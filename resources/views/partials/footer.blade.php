@@ -3,7 +3,7 @@
         <div class="row mb-5">
             <div class="col-md">
                 <div class="ftco-footer-widget mb-4">
-                    <h2 class="logo"><a href="#">CDAM<span>news</span>.</a></h2>
+                    <h2 class="logo"><a href="{{ url('/') }}">CDAM<span>news</span>.</a></h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque posuere volutpat leo, eget
                         rutrum lectus venenatis ut.</p>
                     <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
@@ -23,8 +23,8 @@
                             <div class="text">
                                 <h3 class="heading"><a href="{{ url('post/' . $post->slug) }}">{{ $post->title }}</a></h3>
                                 <div class="meta">
-                                    <div><a href="#"></span> {{ $post->created_at->format('M. d, Y') }}</a></div>
-                                    <div><a href="#"></span>
+                                    <div><a href="{{ url('post/' . $post->slug) }}"></span> {{ $post->created_at->format('M. d, Y') }}</a></div>
+                                    <div><a href="{{ url('post/' . $post->slug) }}"></span>
                                             @if ($post->author != null)
                                                 {{ $post->author->name }}
                                             @else

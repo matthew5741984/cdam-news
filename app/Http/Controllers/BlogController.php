@@ -10,7 +10,7 @@ class BlogController extends Controller
 {
     public function index()
     {
-        $posts = Post::orderBy('created_at', 'DESC')->paginate(9);
+        $posts = Post::where('status', 'PUBLISHED')->orderBy('created_at', 'DESC')->paginate(9);
 
         return view('article.index', compact('posts'));
     }
@@ -19,7 +19,7 @@ class BlogController extends Controller
     {
         $post = Post::findBySlug($slug);
         $this_category = $post->category_id;
-        $recent_posts = Post::where('category_id', $this_category)->where('id', '!=', $post->id)->orderBy('created_at', 'DESC')->take(3)->get();
+        $recent_posts = Post::where('category_id', $this_category)->where('id', '!=', $post->id)->where('status', 'PUBLISHED')->orderBy('created_at', 'DESC')->take(3)->get();
         $categories = Category::select('id', 'name')->get();
 
         return view('article.show', compact('post', 'categories', 'recent_posts'));
@@ -40,11 +40,11 @@ class BlogController extends Controller
     {
         $str = $request->str;
         if (!$str) {
-            $posts = Post::orderBy('created_at', 'DESC')->paginate(9);
+            $posts = Post::where('status', 'PUBLISHED')->orderBy('created_at', 'DESC')->paginate(9);
             return view('article.index', compact('posts'));
         } else {
-            $posts = Post::orderBy('created_at', 'DESC')->where('title', 'LIKE', "%{$str}%")->paginate(9);
-            return view('article.index', compact('posts'));
+            $posts = Post::where('status', 'PUBLISHED')->orderBy('created_at', 'DESC')->where('title', 'LIKE', "%{$str}%")->paginate(9);
+            return view('article.index', compact('posts', 'str'));
         }
     }
 }

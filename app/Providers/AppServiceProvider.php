@@ -28,7 +28,7 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         View::composer('partials.footer', function ($view) {
-            $view->with('posts', Post::orderBy('created_at', 'DESC')->take(2)->get());
+            $view->with('posts', Post::where('status', 'PUBLISHED')->orderBy('created_at', 'DESC')->take(2)->get());
         });
 
         View::composer('partials.jumbotron-2', function ($view) {

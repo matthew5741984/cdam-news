@@ -23,6 +23,6 @@ class Post extends Model
 
     public static function findByCategory($category)
     {
-        return static::where('category_id', $category)->orderBy('created_at', 'DESC')->paginate(9);
+        return static::where('category_id', $category)->where('status', 'PUBLISHED')->orderBy('created_at', 'DESC')->paginate(9);
     }
 }

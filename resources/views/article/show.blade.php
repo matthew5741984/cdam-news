@@ -58,14 +58,17 @@
                         <h3>Recent Blog</h3>
                         @forelse($recent_posts as $recent_post)
                             <div class="block-21 mb-4 d-flex">
-                                <a class="blog-img mr-4" style="background-image: url({{ asset('images/image_1.jpg') }});"></a>
+                                <a class="blog-img mr-4"
+                                    style="background-image: url({{ asset('storage/' . $recent_post->image) }});"></a>
                                 <div class="text">
-                                    <h3 class="heading"><a href="#">{{ $recent_post->title }}</a></h3>
+                                    <h3 class="heading"><a
+                                            href="{{ url('post/' . $recent_post->slug) }}">{{ $recent_post->title }}</a></h3>
                                     <div class="meta">
-                                        <div><a href="#"><span class="icon-calendar"></span>
+                                        <div><a href="{{ url('post/' . $recent_post->slug) }}"><span
+                                                    class="icon-calendar"></span>
                                                 {{ $recent_post->created_at->format('M. d, Y') }}</a></div>
                                         <div>
-                                            <a href="#"><span class="icon-person"></span>
+                                            <a href="{{ url('post/' . $recent_post->slug) }}"><span class="icon-person"></span>
                                                 @if ($post->author != null)
                                                     {{ $recent_post->author->name }}
                                                 @else
