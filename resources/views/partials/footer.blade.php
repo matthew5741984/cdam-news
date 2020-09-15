@@ -19,7 +19,7 @@
                     @forelse($posts as $post)
                         <div class="block-21 mb-4 d-flex">
                             <a class="img mr-4 rounded"
-                                style="background-image: url('{{ asset('storage/' . $post->image) }}');"></a>
+                                style="background-image: url('{{ asset(env('AWS_URL') . "/" . $post->image) }}');"></a>
                             <div class="text">
                                 <h3 class="heading"><a href="{{ url('post/' . $post->slug) }}">{{ $post->title }}</a></h3>
                                 <div class="meta">

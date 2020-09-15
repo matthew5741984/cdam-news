@@ -8,7 +8,7 @@
             <div class="row">
                 <div class="col-lg-8 ftco-animate">
                     <p class="mb-5">
-                        <img src="{{ asset('storage/' . $post->image) }}" alt="" class="img-fluid">
+                        <img src="{{ asset(env('AWS_URL') . "/" . $post->image) }}" alt="" class="img-fluid">
                     </p>
                     <h2 class="mb-3">{{ $post->title }}</h2>
                     {!! $post->body !!}
@@ -24,7 +24,7 @@
                     <div class="about-author d-flex p-4 bg-light">
                         <div class="bio mr-5">
                             @if ($post->author != null)
-                                <img src="{{ asset('storage/' . $post->author->avatar) }}" alt="Image placeholder"
+                                <img src="{{ asset(env('AWS_URL') . "/" . $post->author->avatar) }}" alt="Image placeholder"
                                     class="img-fluid mb-4 author-img">
                             @endif
                         </div>
@@ -59,7 +59,7 @@
                         @forelse($recent_posts as $recent_post)
                             <div class="block-21 mb-4 d-flex">
                                 <a class="blog-img mr-4"
-                                    style="background-image: url({{ asset('storage/' . $recent_post->image) }});"></a>
+                                    style="background-image: url({{ asset(env('AWS_URL') . "/" . $recent_post->image) }});"></a>
                                 <div class="text">
                                     <h3 class="heading"><a
                                             href="{{ url('post/' . $recent_post->slug) }}">{{ $recent_post->title }}</a></h3>

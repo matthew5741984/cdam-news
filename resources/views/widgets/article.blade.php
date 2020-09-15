@@ -5,7 +5,7 @@
                 <div class="col-md-4 d-flex ftco-animate">
                     <div class="blog-entry justify-content-end">
                         <a href="{{ url('post/' . $post->slug) }}" class="block-20"
-                            style="background-image: url('{{ asset('storage/' . $post->image) }}');">
+                            style="background-image: url('{{ asset(env('AWS_URL') . "/" . $post->image) }}');">
                         </a>
                         <div class="text p-4 float-right d-block">
                             <div class="topper d-flex align-items-center">
