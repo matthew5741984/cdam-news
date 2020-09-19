@@ -4,7 +4,6 @@ namespace App\Providers;
 
 use App\Navigation;
 use App\Post;
-use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Facades\URL;
 use Illuminate\Support\ServiceProvider;
 use View;
@@ -28,8 +27,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        Schema::defaultStringLength(191);
-
         View::composer('partials.footer', function ($view) {
             $view->with('posts', Post::where('status', 'PUBLISHED')->orderBy('created_at', 'DESC')->take(2)->get());
         });
