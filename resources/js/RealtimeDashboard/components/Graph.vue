@@ -115,7 +115,7 @@ export default {
       this.currentFlow = this.dynamodbData.slice(-1)[0]["WaterFlow"];
       this.$root.$emit("current-level", this.currentLevel);
       this.$root.$emit("current-flow", this.currentFlow);
-    }, 2000);
+    }, 5000);
   },
 };
 </script>

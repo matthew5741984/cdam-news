@@ -45,7 +45,7 @@ export default {
       setTimeout(() => {
         this.blankPage = false;
         this.isLoading = false;
-      }, 2000);
+      }, 5000);
     },
   },
 };

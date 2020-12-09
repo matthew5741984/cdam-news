@@ -116,7 +116,7 @@ export default {
         this.getCurrentOutFlow = getCurrentFlow[1].replace("(出)", "");
       });
       this.isLoading = false;
-    }, 2000);
+    }, 5000);
   },
 };
 </script>

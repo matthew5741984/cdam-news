@@ -70,7 +70,7 @@ export default {
       setTimeout(() => {
         this.blankPage = false;
         this.isLoading = false;
-      }, 2000);
+      }, 5000);
     },
     onPageChange: function () {
       var dom = document.getElementsByClassName("title-1 m-b-25");
