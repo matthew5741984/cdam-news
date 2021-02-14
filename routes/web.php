@@ -18,7 +18,7 @@ Route::get('post/{slug}', 'BlogController@show');
 Route::get('post/category/{category}', 'BlogController@category');
 Route::get('search', 'BlogController@search');
 
-Route::get('realtime-dashboard', function () {
+Route::get('flow-monitor', function () {
     return view('realtime-dashboard.index');
 });
 

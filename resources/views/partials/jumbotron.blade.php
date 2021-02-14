@@ -7,7 +7,7 @@
                 data-scrollax-parent="true">
                 <div class="col-md-12 ftco-animate">
                     <h2 class="subheading">China's Three Gorges Dam</h2>
-                    <h1 class="mb-4 mb-md-0">Daily News</h1>
+                    <h1 class="mb-4 mb-md-0">DAILY NEWS</h1>
                     <div class="row">
                         <div class="col-md-7">
                             <div class="text">
